@@ -1,10 +1,16 @@
 ﻿namespace Exam1;
 
-class Program
-namespace LargestNumberFinder
+public class LargestNumberFinder
 {
-    public class NewBaseType
-  {
+    public interface INumberProgram
+    {
+        System.String NumberProgram1 { get; set; }
+
+        static abstract global::System.Int32 ProcessInput(global::System.String input, ref global::System.Int32 largest);
+    }
+
+    public class NumberProgram : INumberProgram
+    {
         static void Main(string[] args)
         {
             int largest = 5;
@@ -28,8 +34,8 @@ namespace LargestNumberFinder
         {
             int largest = 20;
             int result = NumberProgram.ProcessInput("40", ref largest);
-            Assert.AreEqual(20, largest);
-            Assert.AreEqual(10, result);
+            global::System.Object value = Assert.AreEqual(20, largest);
+            global::System.Object value1 = Assert.AreEqual(10, result);
         }
 
     }
