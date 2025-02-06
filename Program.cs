@@ -1,54 +1,30 @@
-﻿
-[TestClass]
-public class CalculatorTests
+﻿public class Employee 
 {
-    private CalculatorTests? _calculator;
+    public int EmployeeId { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Email { get; set; }
+    public string PhoneNumber { get; set; }
+    public DateTime HireDate { get; set; }
+    public string JobTitle { get; set; }
+    public decimal Salary { get; set; }
 
-    [TestInitialize]
-    public void Setup()
+        public Employee(
+        int EmployeeId, string firstName, string lastName, string email, string phoneNumber, DateTime hireDate, string jobTitle, decimal salary) 
     {
-        // Arrange
-        _calculator = new Calculator();
+        EmployeeId = EmployeeId;
+        FirstName = firstName;
+        LastName = lastName;
+        Email = email;
+        PhoneNumber = phoneNumber;
+        HireDate = hireDate;
+        JobTitle = jobTitle;
+        Salary = salary;
     }
 
-    [TestMethod]
-    public void Add_ShouldReturnSum_WhenGivenTwoPositiveNumbers()
+    public Employee()
     {
-        // Act
-        var result = _calculator.Add(5, 7);
-
-        // Assert
-        Assert.AreEqual(12, result);
-    }
-
-    private object Add(int v1, int v2)
-    {
-        throw new NotImplementedException();
-    }
-
-    [TestMethod]
-    public void Add_ShouldReturnSum_WhenGivenNegativeAndPositiveNumber()
-    {
-        // Act
-        var result = _calculator.Add(-3, 7);
-
-        // Assert
-        Assert.AreEqual(4, result);
     }
 }
 
-internal class TestMethodAttribute : Attribute
-{
-}
-
-internal class Calculator : CalculatorTests
-{
-}
-
-internal class TestInitializeAttribute : Attribute
-{
-}
-
-internal class TestClassAttribute : Attribute
-{
-}
+Employee newEmployee1 = new Employee(1, "Sarah", "Marshall", "sarah.marshall@gmail.com',"132 - 546 - 8970", DateTime.Now, "Software Engineer", 10000);;
