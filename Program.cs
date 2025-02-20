@@ -1,42 +1,13 @@
-﻿namespace Exam1;
+﻿using System;
 
-public class LargestNumberFinder
+class Program 
 {
-    public interface INumberProgram
+  public static void Main (string[] args) 
+  {
+    string input = "49"; // or use "49" in a notebook
+    try
     {
-        System.String NumberProgram1 { get; set; }
-
-        static abstract global::System.Int32 ProcessInput(global::System.String input, ref global::System.Int32 largest);
+      int age = int.Parse(input);
+      Console.WriteLine($"You are {age} years old.");
     }
-
-    public class NumberProgram : INumberProgram
-    {
-        static void Main(string[] args)
-        {
-            int largest = 5;
-            int result = NumberProgram1("10", ref largest);
-            Assert.AreEqual(10, largest);
-            Assert.AreEqual(10, result);
-        }
-    }
-
-    public class NumberProgram
-    {
-        Console.WriteLine('Enter largest NumberProgram');
-        Console.WriteLine("5", + LargestNumberFinder);
-        string NumberProgram = Console.ReadLine();
-        public System.String NumberProgram1 { get => NumberProgram; set => NumberProgram = value; }
-    }
-   
-    public class NumberProgram
-    {
-        public static int ProcessInput(string input, ref int largest)
-        {
-            int largest = 20;
-            int result = NumberProgram.ProcessInput("40", ref largest);
-            global::System.Object value = Assert.AreEqual(20, largest);
-            global::System.Object value1 = Assert.AreEqual(10, result);
-        }
-
-    }
-}
+    
