@@ -1,69 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ThrowingExceptions; 
+﻿namespace testingExceptions;
+public class Hero
 {
-    class Program 
-    {
-        static void Main(string[] args) 
-        {
-            void fail() 
-            {
-                (null as string). Trim();
-            }
-            void bareThrow() 
-            {
-                try 
-                {
-                    fail();
-                }
-                catch (Exception e) 
-                {
-                    throw;
-                }
-            }
-            void rethrow() 
-            {
-                try 
-                {
-                    fail();
-                }
-                catch (Exception e) 
-                {
-                    throw e;
-                }
-            }
-            void innerThrow() 
-            {
-                try 
-                {
-                    fail();
-                }
-                catch (Exception e) 
-                {
-                    throw new Exception("outer", e);
-                }
-            }
-            var cases = new Dictionary<string, Action;
-            {
-                 { "Bare Throw:", bareThrow },
-                 { "Rethrow", rethrow },
-                 { "Inner Throw", innerThrow }
-            };
-            foreach (var c in cases) 
-            {
-                Console.WriteLine(c.Key);
-                Console.WriteLine(new string('-',40));
-                try 
-                {
-                    c.Value();
-                } catch (Exception e) 
-                {
-                    Console.WriteLine(e.ToString());
-                }
-            }
+    private const int ExperienceNeeded = 1000;
 
-            }
+    public int Level { get; set; }
+    public int Experience { get; set; }
+
+    public Hero(int experience)
+    {
+        Level = 0;
+        Experience = experience;
+    }
+
+    public void LevelUp()
+    {
+        if (Experience - ExperienceNeeded < 0)
+        {
+            throw new ArgumentOutOfRangeException(
+                nameof(Experience),
+                "Not enough Experience to level up!");
         }
+
+        Experience -= ExperienceNeeded;
+        Level++;
     }
 }
