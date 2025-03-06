@@ -1,40 +1,21 @@
-﻿using System;
-using System.Net.Http.Json;
-using System.Text.Json.Serialization;
+﻿https://api.agify.io?name[]=melody&name[]=joy&name[]=emma
 
-interface IProgram
-{
-    static abstract string Name { get; }
-    static abstract int Age { get; }
-    Version DeserializedPerson { get; set; }
-}
-
-class Program : IProgram
-{
-    static void Main(string[] args)
+[
     {
-        Version person = new Person;
-        {
-            Name = "John Doe",
-            Age = 30;
-        }
-        ;
-
-        string json = JsonConverter.SerializeObject(person);
-        Console.WriteLine("Serialized JSON: " + json);
+        count: int v = 7830;
+    string v1 = name = Melody;
+        age: int v2 = 53;
     }
-    Version deserializedPerson = JsonContent.DeserializeObject<Person>(json);
 
-    public static string Name { get; private set; }
-    public static int Age { get; private set; }
-    public Version DeserializedPerson { get => deserializedPerson; set => deserializedPerson = value; }
-   
-    Console.WriteLine("Deserialized Person: Name - " + deserializedPerson.Name + ", Age - " + deserializedPerson.Age);
-   
-}
+    {
+    string v = count = 23419;
+    string v1 = name = joy;
+    string v2 = age = 66;
+    }
 
-internal class Person
-{
-    public string Name { get; set; }
-    public int Age { get; set; }
-}
+    {
+        count: int v = 56913;
+    string v1 = name = Emma;
+    age: int v2 = 42;
+    }
+]
