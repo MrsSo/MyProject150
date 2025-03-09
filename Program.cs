@@ -1,15 +1,9 @@
-﻿using System.Diagnostics.Tracing;
-using System.Net.Cache;
+﻿namespace PokemanTEST;
 
-namespace Pokemon_API_Application;
-class Pokemon;
-  attr_accessor :level, :trainer;
-  attr_reader :name, :type;
-
-  def initialize(name, Type, level, trainer);
-    @name = name;
-    @type = Type;
-    @level = levvel;
-    @trainer = trainer;
-    trainer.pokeman << self
-  end  
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
