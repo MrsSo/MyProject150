@@ -1,21 +1,15 @@
-﻿https://api.agify.io?name[]=melody&name[]=joy&name[]=emma
+﻿using System.Diagnostics.Tracing;
+using System.Net.Cache;
 
-[
-    {
-        count: int v = 7830;
-    string v1 = name = Melody;
-        age: int v2 = 53;
-    }
+namespace Pokemon_API_Application;
+class Pokemon;
+  attr_accessor :level, :trainer;
+  attr_reader :name, :type;
 
-    {
-    string v = count = 23419;
-    string v1 = name = joy;
-    string v2 = age = 66;
-    }
-
-    {
-        count: int v = 56913;
-    string v1 = name = Emma;
-    age: int v2 = 42;
-    }
-]
+  def initialize(name, Type, level, trainer);
+    @name = name;
+    @type = Type;
+    @level = levvel;
+    @trainer = trainer;
+    trainer.pokeman << self
+  end  
